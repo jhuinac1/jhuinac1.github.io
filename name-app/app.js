@@ -39,31 +39,29 @@ const showMeal = () => {
   $("form").trigger("reset");
 };
 
-$(() => {
-  $.ajax({
-    url: "https://www.themealdb.com/api/json/v1/1/categories.php",
-    type: "GET",
-  }).then(
-    (data) => {
-      console.log(data.categories);
+$.ajax({
+  url: "https://www.themealdb.com/api/json/v1/1/categories.php",
+  type: "GET",
+}).then(
+  (data) => {
+    console.log(data.categories);
 
-      for (let category of data.categories) {
-        if (category.strCategory === "Miscellaneous") {
-          continue;
-        }
-        const div = $("<div>");
-        const categoryName = $("<h3>").text(category.strCategory);
-        console.log(category.strCategory);
-        const image = $("<img>").attr("src", category.strCategoryThumb);
-        const description = $("<p>").text(category.strCategoryDescription);
-        div.append(categoryName, image, description);
-        $("#description-container").append(div);
+    for (let category of data.categories) {
+      if (category.strCategory === "Miscellaneous") {
+        continue;
       }
-    },
-    (error) => {
-      console.log(error);
+      const div = $("<div>");
+      const categoryName = $("<h3>").text(category.strCategory);
+      console.log(category.strCategory);
+      const image = $("<img>").attr("src", category.strCategoryThumb);
+      const description = $("<p>").text(category.strCategoryDescription);
+      div.append(categoryName, image, description);
+      $("#description-container").append(div);
     }
-  );
-});
+  },
+  (error) => {
+    console.log(error);
+  }
+);
 
 $("#lookMeal").on("click", showMeal);
