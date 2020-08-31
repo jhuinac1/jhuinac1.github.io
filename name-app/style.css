@@ -1,4 +1,56 @@
-div {
-  height: 300px;
-  width: 400px;
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  text-align: center;
+}
+
+header {
+  height: 60vh;
+  text-align: center;
+  background: url("img/header.jpg");
+  background-size: contain;
+  background-position: center;
+  padding-top: 60px;
+}
+
+header h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#category-description {
+  height: 500px;
+  /* background: yellow; */
+}
+#description-container div {
+  box-shadow: 0 -55px 90px inset rgb(224, 208, 228);
+  border: 1px solid white;
+  padding: 50px 40px;
+  background: rgba(15, 76, 133, 0.178);
+}
+#meal-section {
+  padding: 20px;
+  height: 500px;
+  /* background-color: rgb(114, 44, 44); */
+  border: 1px solid green;
+}
+
+img {
+  height: 200px;
+}
+
+#mealsContainer {
+  display: flex;
+  overflow: auto;
+  margin: 0 auto;
+  width: 90vw;
+  height: 320px;
+  border: 1px solid yellow;
+  justify-content: center;
+}
+
+#mealsContainer div {
+  margin: 10px;
+  text-align: center;
+  border: 1px solid white;
 }
