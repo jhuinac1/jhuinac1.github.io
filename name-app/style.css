@@ -11,29 +11,13 @@ body {
 
 header {
   height: 100vh;
+  width: 100%;
   background: url("img/header.jpg");
   background-size: cover;
   background-position: center;
-  padding-top: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-clip: text;
-}
-body {
-  /* background-image: url(img/body.jpg); */
-  /* background-position: 0 70vh; */
-  /* background-repeat: no-repeat;
-  background-size: contain; */
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  background-image: url(img/body2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-color: grayscale(100%);
 }
 
 header h1 {
@@ -49,6 +33,20 @@ header h1 {
   color: white;
   background: rgba(63, 62, 60, 0.658);
 }
+body {
+  /* background-image: url(img/body.jpg); */
+  /* background-position: 0 70vh; */
+  /* background-repeat: no-repeat;
+  background-size: contain; */
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  background-image: url(img/body2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
 /* end of header */
 /* main {
@@ -60,11 +58,17 @@ header h1 {
 } */
 
 /* mainn......!!!! */
+/* main { */
+/* width: 100vw;
+} */
 
 /* main */
 #meal-section {
   padding: 20px;
-  height: 500px;
+  min-height: 500px;
+  background-color: rgba(112, 112, 101, 0.425);
+  width: 85vw;
+  margin: 20px auto;
   /* background-color: rgb(114, 44, 44); */
   /* border: 1px solid green; */
 }
@@ -73,20 +77,29 @@ img {
   height: 300px;
 }
 
+#meals {
+  background-color: rgba(131, 45, 30, 0.527);
+}
 #mealsContainer {
   display: flex;
-  overflow: auto;
   margin: 0 auto;
-  width: 90vw;
-  height: 450px;
+  min-height: 450px;
   /* border: 1px solid yellow; */
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 5px;
 }
 
 #mealsContainer div {
   margin: 10px;
   text-align: center;
   /* border: 1px solid white; */
+}
+
+#mealsContainer div h3 {
+  color: white;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
 }
 
 #category-description {
@@ -119,7 +132,6 @@ img {
   width: 90%;
   padding: 0 50px;
   overflow: hidden;
-  font-family: cursive;
   font-family: "Amatic SC", cursive;
   /* border: 1px solid red; */
   display: flex;
@@ -133,4 +145,41 @@ img {
 
 #description-container > div:hover .hide-paragraph {
   height: 100%;
+}
+
+@media (max-width: 500px) {
+  header {
+    height: 70vh;
+    padding-top: 0;
+  }
+  header h1 {
+    font-size: 1.5em;
+    padding: 30px;
+    height: 70px;
+  }
+  img {
+    height: 100px;
+  }
+  main {
+    max-width: 100vw;
+  }
+  #category-description {
+    width: 100vw;
+  }
+
+  #description-container div h3 {
+    font-size: 2em;
+    padding: 20px 0;
+    font-family: cursive;
+  }
+  #description-container div p {
+    font-size: 1.1em;
+    transition: 1s ease;
+    border-radius: 5px;
+    padding: 0 20px;
+    height: 0;
+  }
+  #description-container > div:hover .hide-paragraph {
+    height: 100%;
+  }
 }
