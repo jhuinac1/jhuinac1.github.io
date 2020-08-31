@@ -50,11 +50,12 @@ $.ajax({
       if (category.strCategory === "Miscellaneous") {
         continue;
       }
-      const div = $("<div>");
+      const div = $("<div>").addClass("meals");
       const categoryName = $("<h3>").text(category.strCategory);
       console.log(category.strCategory);
       const image = $("<img>").attr("src", category.strCategoryThumb);
       const description = $("<p>").text(category.strCategoryDescription);
+      description.addClass("hide-paragraph");
       div.append(categoryName, image, description);
       $("#description-container").append(div);
     }

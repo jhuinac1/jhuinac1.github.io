@@ -1,42 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  /* border: 1px solid red; */
 }
 body {
   text-align: center;
 }
 
 header {
-  height: 60vh;
-  text-align: center;
+  height: 100vh;
   background: url("img/header.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   padding-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-clip: text;
+}
+body {
+  /* background-image: url(img/body.jpg); */
+  /* background-position: 0 70vh; */
+  /* background-repeat: no-repeat;
+  background-size: contain; */
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  background-image: url(img/body2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: grayscale(100%);
 }
 
 header h1 {
   font-family: Arial, Helvetica, sans-serif;
+  background-clip: text;
+  font-size: 4em;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 70px;
+  border-radius: 10px;
+  font-weight: 900;
+  color: white;
+  background: rgba(63, 62, 60, 0.658);
 }
-#category-description {
-  height: 500px;
-  /* background: yellow; */
-}
-#description-container div {
-  box-shadow: 0 -55px 90px inset rgb(224, 208, 228);
-  border: 1px solid white;
-  padding: 50px 40px;
-  background: rgba(15, 76, 133, 0.178);
-}
+
+/* end of header */
+/* main {
+  background-image: url(img/main-pic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+} */
+
+/* mainn......!!!! */
+
+/* main */
 #meal-section {
   padding: 20px;
   height: 500px;
   /* background-color: rgb(114, 44, 44); */
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 img {
-  height: 200px;
+  height: 300px;
 }
 
 #mealsContainer {
@@ -44,13 +78,59 @@ img {
   overflow: auto;
   margin: 0 auto;
   width: 90vw;
-  height: 320px;
-  border: 1px solid yellow;
+  height: 450px;
+  /* border: 1px solid yellow; */
   justify-content: center;
 }
 
 #mealsContainer div {
   margin: 10px;
   text-align: center;
-  border: 1px solid white;
+  /* border: 1px solid white; */
+}
+
+#category-description {
+  height: 500px;
+  width: 1000px;
+  margin: auto;
+  /* background: yellow; */
+}
+
+#description-container div {
+  /* border: 1px solid white; */
+  padding: 50px 40px;
+  background: rgba(0, 0, 0, 0.493);
+  margin: 20px auto;
+  position: relative;
+  border-radius: 5px;
+  color: rgb(199, 199, 199);
+}
+#description-container div h3 {
+  font-size: 4em;
+  padding: 20px 0;
+  font-family: cursive;
+}
+#description-container div p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  width: 90%;
+  padding: 0 50px;
+  overflow: hidden;
+  font-family: cursive;
+  font-family: "Amatic SC", cursive;
+  /* border: 1px solid red; */
+  display: flex;
+  font-size: 1.8em;
+  align-items: center;
+  background-color: rgba(224, 224, 224, 0.966);
+  color: rgb(87, 87, 87);
+  transition: 1s ease;
+  border-radius: 5px;
+}
+
+#description-container > div:hover .hide-paragraph {
+  height: 100%;
 }
