@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 
 * {
   margin: 0;
@@ -7,6 +8,10 @@
 }
 body {
   text-align: center;
+  position: relative;
+}
+button {
+  cursor: pointer;
 }
 
 header {
@@ -49,42 +54,87 @@ body {
 }
 
 /* end of header */
-/* main {
-  background-image: url(img/main-pic.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-} */
 
 /* mainn......!!!! */
-/* main { */
-/* width: 100vw;
-} */
 
 /* main */
 #meal-section {
   padding: 20px;
-  min-height: 500px;
-  background-color: rgba(112, 112, 101, 0.425);
+  min-height: 300px;
+  background-color: rgba(65, 65, 62, 0.342);
   width: 85vw;
   margin: 20px auto;
-  /* background-color: rgb(114, 44, 44); */
-  /* border: 1px solid green; */
 }
-
+form {
+  padding: 40px;
+  position: relative;
+  height: 100px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+#mealInput {
+  height: 80px;
+  width: 400px;
+  text-align: center;
+  font-size: 2.5em;
+  background-color: rgba(65, 63, 63, 0.493);
+  border: none;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px white;
+  font-weight: 900;
+  border-bottom: 3px solid white;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  outline: none;
+  transform: translateX(50%);
+}
+#mealInput:hover,
+#mealInput:focus,
+input:hover + #mealInput {
+  border-bottom: 3px solid rgb(0, 174, 255);
+  width: 300;
+  transform: translateX(0);
+}
+#lookMeal {
+  height: 80px;
+  width: 400px;
+  background: rgba(177, 177, 177, 0.397);
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-weight: 900;
+  font-size: 2em;
+  /* position: absolute; */
+  left: 50%;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transform: translatex(-50%);
+  outline: none;
+}
+#lookMeal:hover,
+#mealInput:hover ~ #lookMeal,
+#mealInput:focus ~ #lookMeal {
+  position: initial;
+  transform: translatex(0);
+  width: 160px;
+  font-size: 1.4em;
+}
+/* 
+.inside-form:hover,
+.inside-form:focus {
+  transform: translatex(0);
+} */
 img {
   height: 300px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgb(63, 63, 63);
 }
 
-#meals {
-  background-color: rgba(54, 32, 28, 0.527);
-}
 #mealsContainer {
   display: flex;
   margin: 0 auto;
-  min-height: 450px;
-  /* border: 1px solid yellow; */
+  min-height: 100px;
   justify-content: space-around;
   flex-wrap: wrap;
   border-radius: 5px;
@@ -93,20 +143,30 @@ img {
 #mealsContainer div {
   margin: 10px;
   text-align: center;
-  /* border: 1px solid white; */
+  cursor: pointer;
+  border: 1px solid rgba(54, 52, 52, 0.322);
+  padding: 12px;
+  border-radius: 10px;
+  background-color: rgba(250, 250, 250, 0.486);
+
+  transition: 1s ease;
+}
+#mealsContainer div:active {
+  background-color: rgb(82, 59, 54);
+  transform: rotate(360deg);
 }
 
 #mealsContainer div h3 {
   color: white;
   font-family: "Amatic SC", cursive;
-  font-size: 30px;
+  font-size: 40px;
+  background-color: rgba(4, 4, 26, 0.904);
 }
 
 #category-description {
   height: 500px;
   width: 1000px;
   margin: auto;
-  /* background: yellow; */
 }
 
 #description-container div {
@@ -146,6 +206,114 @@ img {
 #description-container > div:hover .hide-paragraph {
   height: 100%;
 }
+
+/* LETS TAKE CARE OF THE MODAL!!!! */
+#modal {
+  height: 100%;
+  width: 100%;
+  display: none;
+  font-family: "Amatic SC", cursive;
+  font-size: 1.5em;
+}
+
+#modal-textbox {
+  margin: 20px auto;
+  border-radius: 5px;
+  background: rgba(204, 204, 204, 0.993);
+  /* box-shadow: 20px 20px 90px rgba(248, 248, 248, 0.658); */
+  background-image: url(img/menu4.jpg);
+  background-size: contain;
+  padding: 20px;
+  position: relative;
+}
+#back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 100px;
+  width: 100px;
+  background-image: url(icons/icon1.png);
+  background-size: contain;
+  border-radius: 20px;
+  background-color: rgba(31, 46, 46, 0.973);
+  border: 1px solid white;
+  transition: rotate(285deg);
+  transition-timing-function: 2s;
+  outline: none;
+}
+#back:hover {
+  background-color: rgb(100, 139, 135);
+}
+#ingredients {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px 60px;
+  justify-content: space-between;
+}
+#ingredients li {
+  list-style-type: none;
+  color: white;
+  /* border: 1px solid black; */
+  background-color: rgba(34, 34, 34, 0.856);
+  border-radius: 5px;
+  padding: 10px;
+  width: 45%;
+  margin: 5px;
+  text-align: justify;
+  font-size: 1.1em;
+}
+#modal-textbox p {
+  border-top: 0.5px solid rgba(161, 159, 159, 0.644);
+  padding: 40px 120px;
+  letter-spacing: 1.5px;
+  color: white;
+  background-color: rgba(34, 34, 34, 0.945);
+  font-size: 0.9em;
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+#category {
+  font-size: 4em;
+  color: white;
+  background-color: rgba(34, 34, 34, 0.856);
+}
+#region {
+  font-size: 2.5em;
+  color: white;
+  background-color: rgba(34, 34, 34, 0.856);
+}
+#title {
+  font-size: 2em;
+  color: white;
+  background-color: rgba(34, 34, 34, 0.856);
+}
+#instruction-title {
+  font-size: 3em;
+  color: white;
+  background: rgba(48, 48, 48, 0.856);
+}
+#video-instructions {
+  margin: 50px;
+  height: 420px;
+  width: 580px;
+}
+
+/* ////////////////////////
+////////////category title///
+/////////////////////////// */
+#category-title {
+  color: rgb(70, 49, 49);
+  width: 100%;
+  margin-top: 300px;
+  font-size: 3em;
+  height: 300px;
+  background-color: rgba(216, 216, 216, 0.404);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* END OF THE MODAL */
 
 @media (max-width: 500px) {
   header {
