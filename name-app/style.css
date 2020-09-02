@@ -36,7 +36,7 @@ header h1 {
   border-radius: 10px;
   font-weight: 900;
   color: white;
-  background: rgba(63, 62, 60, 0.658);
+  background: rgba(46, 46, 46, 0.74);
 }
 body {
   /* background-image: url(img/body.jpg); */
@@ -202,9 +202,16 @@ img {
   transition: 1s ease;
   border-radius: 5px;
 }
-
-#description-container > div:hover .hide-paragraph {
+#description-container > div > .show-p:hover + .hide-paragraph,
+#description-container div p:hover {
   height: 100%;
+}
+/* #description-container > div:hover > .hide-paragraph {
+  height: 100%;
+} */
+
+#description-container > div > img {
+  cursor: pointer;
 }
 
 /* LETS TAKE CARE OF THE MODAL!!!! */
@@ -314,6 +321,12 @@ img {
 }
 
 /* END OF THE MODAL */
+
+@media (max-width: 2018px) {
+  #meal-section {
+    width: 918px;
+  }
+}
 
 @media (max-width: 500px) {
   header {

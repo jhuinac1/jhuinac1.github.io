@@ -44,7 +44,9 @@ $.ajax({
       }
       const div = $("<div>").addClass("meals");
       const categoryName = $("<h3>").text(category.strCategory);
-      const image = $("<img>").attr("src", category.strCategoryThumb);
+      const image = $("<img>")
+        .attr("src", category.strCategoryThumb)
+        .addClass("show-p");
       const description = $("<p>").text(category.strCategoryDescription);
       description.addClass("hide-paragraph");
       div.append(categoryName, image, description);
@@ -71,6 +73,7 @@ const getRecipe = () => {
     //   add a funtion to hide the modal and put back the all the items...
     mealList.show();
     $("#modal").hide();
+    $("#video-instructions").attr("src", "");
   });
   $.ajax({
     url: "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id,
