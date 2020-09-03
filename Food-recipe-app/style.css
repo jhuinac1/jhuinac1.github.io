@@ -39,10 +39,6 @@ header h1 {
   background: rgba(46, 46, 46, 0.808);
 }
 body {
-  /* background-image: url(img/body.jpg); */
-  /* background-position: 0 70vh; */
-  /* background-repeat: no-repeat;
-  background-size: contain; */
   display: flex;
   flex-direction: column;
   align-content: space-around;
@@ -81,7 +77,6 @@ form {
   background-color: rgba(65, 63, 63, 0.493);
   border: none;
   color: rgb(255, 255, 255);
-  text-shadow: 1px 1px white;
   font-weight: 900;
   border-bottom: 3px solid white;
   transition-duration: 0.2s;
@@ -468,17 +463,57 @@ img {
   }
 }
 
-@media (max-width: 542) {
+@media (max-width: 542px) {
+  #mealInput {
+    width: 150px;
+    font-size: 1em;
+  }
+  #lookMeal {
+    font-size: 1em;
+    width: 100px;
+  }
+  #lookMeal:hover,
+  #mealInput:hover ~ #lookMeal,
+  #mealInput:focus ~ #lookMeal {
+    transform: translatex(0);
+    width: 90px;
+    font-size: 0.7em;
+  }
+  #meal-section {
+    padding: 20px 3px;
+    margin: 20px 0;
+    width: 100vw;
+  }
+
+  #mealsContainer div img {
+    width: 250px;
+    height: 230px;
+  }
+
+  #back {
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100px;
+  }
+  #category {
+    margin-top: 20px;
+    font-size: 1.8em;
+  }
+  #region {
+    font-size: 1.5em;
+  }
+  #title {
+    margin-top: 40px;
+  }
+
   #ingredients {
     padding: 12px;
-  }
-  ul {
-    padding: 0;
   }
 
   #video-instructions {
     margin: 1px;
-    height: 100px;
-    width: 180px;
+    height: 190px;
+    width: 310px;
   }
 }
