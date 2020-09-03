@@ -9,6 +9,8 @@
 
 const showMeal = () => {
   event.preventDefault();
+  $("#modal").hide();
+  $("#video-instructions").attr("src", "");
   $("#mealsContainer").children().remove();
   const meal = $("#mealInput").val();
   $.ajax({
