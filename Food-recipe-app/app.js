@@ -1,12 +1,3 @@
-// const randColor = () => {
-//   const r = Math.floor(Math.random() * 256);
-//   const g = Math.floor(Math.random() * 256);
-//   const b = Math.floor(Math.random() * 256);
-//   const o = Math.random();
-
-//   return `rgb(${r},${g},${b},${o})`;
-// };
-
 const showMeal = () => {
   event.preventDefault();
   $("#modal").hide();
@@ -83,7 +74,6 @@ const getRecipe = () => {
   }).then(
     (data) => {
       console.log(data);
-      //   $("#meal-name").text(name);
       $("#category").text("Category: " + data.meals[0].strCategory);
       $("#region").text(data.meals[0].strArea);
 

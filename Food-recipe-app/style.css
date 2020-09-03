@@ -115,11 +115,7 @@ input:hover + #mealInput {
   width: 160px;
   font-size: 1.4em;
 }
-/* 
-.inside-form:hover,
-.inside-form:focus {
-  transform: translatex(0);
-} */
+
 img {
   height: 300px;
   border-radius: 5px;
@@ -201,9 +197,6 @@ img {
 #description-container div p:hover {
   height: 100%;
 }
-/* #description-container > div:hover > .hide-paragraph {
-  height: 100%;
-} */
 
 #description-container > div > img {
   cursor: pointer;
@@ -373,7 +366,6 @@ img {
   #lookMeal:hover,
   #mealInput:hover ~ #lookMeal,
   #mealInput:focus ~ #lookMeal {
-    /* position: initial; */
     transform: translatex(0);
     width: 100px;
     font-size: 1em;
