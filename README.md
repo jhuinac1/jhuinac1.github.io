@@ -4,7 +4,11 @@
 
 ## Description
 
-    This application helps users find the recipe by typing the name of the meal in the search bar. multiple options might appear. once the meal has been selected, a new window will pop up that shows the category for the food, area, ingredients, a short description with steps to prepare the meal, and at the end (if link available) a youtube video will show up with steps to create the meal.
+    This application helps users find the recipe by typing the name of the meal in the search bar. 
+    multiple options might appear. once the meal has been selected, 
+    a new window will pop up that shows the category for the food, area, ingredients, 
+    a short description with steps to prepare the meal, and at the end (if link available) 
+    a youtube video will show up with steps to create the meal.
 
 ## Technology Used
 
