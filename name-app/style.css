@@ -36,7 +36,7 @@ header h1 {
   border-radius: 10px;
   font-weight: 900;
   color: white;
-  background: rgba(46, 46, 46, 0.74);
+  background: rgba(46, 46, 46, 0.808);
 }
 body {
   /* background-image: url(img/body.jpg); */
@@ -115,7 +115,7 @@ input:hover + #mealInput {
 #lookMeal:hover,
 #mealInput:hover ~ #lookMeal,
 #mealInput:focus ~ #lookMeal {
-  position: initial;
+  /* position: initial; */
   transform: translatex(0);
   width: 160px;
   font-size: 1.4em;
@@ -149,11 +149,11 @@ img {
   border-radius: 10px;
   background-color: rgba(250, 250, 250, 0.486);
 
-  transition: 1s ease;
+  transition: 0.1s linear;
 }
-#mealsContainer div:active {
+#mealsContainer div:hover {
   background-color: rgb(82, 59, 54);
-  transform: rotate(360deg);
+  transform: rotate(5deg);
 }
 
 #mealsContainer div h3 {
@@ -172,7 +172,7 @@ img {
 #description-container div {
   /* border: 1px solid white; */
   padding: 50px 40px;
-  background: rgba(0, 0, 0, 0.493);
+  background: rgba(0, 0, 0, 0.74);
   margin: 20px auto;
   position: relative;
   border-radius: 5px;
@@ -212,6 +212,8 @@ img {
 
 #description-container > div > img {
   cursor: pointer;
+  box-shadow: 0 1px 100px inset rgba(128, 128, 128, 0.993);
+  padding: 12px;
 }
 
 /* LETS TAKE CARE OF THE MODAL!!!! */
@@ -243,7 +245,7 @@ img {
   background-size: contain;
   border-radius: 20px;
   background-color: rgba(31, 46, 46, 0.973);
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.418);
   transition: rotate(285deg);
   transition-timing-function: 2s;
   outline: none;
@@ -303,18 +305,21 @@ img {
   margin: 50px;
   height: 420px;
   width: 580px;
+  padding: 12px;
+  background-color: rgba(14, 14, 14, 0.781);
+  border-radius: 5px;
 }
 
 /* ////////////////////////
 ////////////category title///
 /////////////////////////// */
 #category-title {
-  color: rgb(70, 49, 49);
+  color: rgb(48, 33, 33);
   width: 100%;
   margin-top: 300px;
   font-size: 3em;
   height: 300px;
-  background-color: rgba(216, 216, 216, 0.404);
+  background-color: rgba(216, 216, 216, 0.568);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -322,15 +327,99 @@ img {
 
 /* END OF THE MODAL */
 
-@media (max-width: 2018px) {
-  #meal-section {
-    width: 918px;
+@media (max-width: 1030px) {
+  #mealInput,
+  #lookMeal {
+    transform: translateX(0);
+    font-size: 1.5em;
+  }
+  #mealInput {
+    width: 300px;
+  }
+  #lookMeal {
+    width: 200px;
+  }
+  #category-description {
+    width: 100%;
+  }
+  img {
+    height: 200px;
+  }
+
+  /* fixing modal screen adjust */
+  #back {
+    height: 70px;
+    width: 70px;
+  }
+
+  #instructions {
+    font-size: 12px;
+  }
+  #mealsContainer div h3 {
+    font-size: 2em;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 815px) {
+  header h1 {
+    padding: 40px;
+    font-size: 3em;
+  }
+  #mealInput {
+    width: 250px;
+    height: 60px;
+    font-size: 1.2em;
+  }
+  #lookMeal {
+    width: 120px;
+    height: 60px;
+    font-size: 1.1em;
+  }
+  #lookMeal:hover,
+  #mealInput:hover ~ #lookMeal,
+  #mealInput:focus ~ #lookMeal {
+    /* position: initial; */
+    transform: translatex(0);
+    width: 100px;
+    font-size: 1em;
+  }
+  #category {
+    font-size: 2.5em;
+  }
+  #region {
+    font-size: 1.9em;
+  }
+  #title {
+    font-size: 1.5em;
+  }
+  #ingredients li {
+    font-size: 0.9em;
+    width: 40%;
+  }
+  #instruction-title {
+    font-size: 2em;
+    margin-top: 70px;
+  }
+  #video-instructions {
+    height: 250px;
+    width: 350px;
+  }
+  #back {
+    border-radius: 10px;
+  }
+
+  #mealsContainer div img {
+    width: 170px;
+    height: 170px;
+  }
+  #mealsContainer div h3 {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 700px) {
   header {
-    height: 70vh;
+    height: 90vh;
     padding-top: 0;
   }
   header h1 {
@@ -355,12 +444,31 @@ img {
   }
   #description-container div p {
     font-size: 1.1em;
-    transition: 1s ease;
     border-radius: 5px;
     padding: 0 20px;
     height: 0;
   }
-  #description-container > div:hover .hide-paragraph {
-    height: 100%;
+
+  #modal-textbox p {
+    padding: 20px;
+    font-size: 0.8em;
   }
+  #video-instructions {
+    margin: 12px;
+  }
+}
+
+@media (max-width: 542) {
+  #ingredients {
+    padding: 12px;
+  }
+  .ingredient {
+    font-size: 1em;
+    width: 100%;
+    padding: 0;
+  }
+  /* #video-instructions {
+    height: 100px;
+    width: 580px;
+  } */
 }
