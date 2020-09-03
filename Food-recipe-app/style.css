@@ -406,7 +406,7 @@ img {
 
 @media (max-width: 700px) {
   header {
-    height: 90vh;
+    height: 50vh;
     padding-top: 0;
   }
   header h1 {
